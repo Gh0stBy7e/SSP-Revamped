@@ -4,6 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +18,7 @@ namespace Self_Study_Planner
 {
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +38,14 @@ namespace Self_Study_Planner
 
         private void entryMod_Click(object sender, EventArgs e)
         {
-            entryLst.SelectedIndex = Convert.ToInt32(entryInput.Text);
+            if (entryLst.SelectedIndex != -1)
+            {
+                entryLst.Items[entryLst.SelectedIndex] = entryInput.Text;
+                if (entryInput.Text.Length == 0)
+                {
+                    entryLst.Items.RemoveAt(entryLst.SelectedIndex);
+                }
+            }
         }
     }
 }
