@@ -40,9 +40,14 @@ namespace Self_Study_Planner
 
         private void EntrySav_Click(object sender, EventArgs e)
         {
-            string[] writelog;
+            string[] writelog = new string[EntryLst.Items.Count];
 
-            File.WriteAllLines("studylog.txt", EntryLst.Items);
+            for (int i = 0; i < EntryLst.Items.Count; i++)
+            {
+                writelog[i] = EntryLst.Items[i].ToString();
+            }
+
+            File.WriteAllLines("studylog.txt", writelog);
         }
 
         private void EntryLoad_Click(object sender, EventArgs e)
