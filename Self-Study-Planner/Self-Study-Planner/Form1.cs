@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.IO;
 using System.Drawing;
-using System.Linq;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Self_Study_Planner
 {
@@ -22,30 +12,42 @@ namespace Self_Study_Planner
         public Form1()
         {
             InitializeComponent();
-            labelBoot.ForeColor = Color.Green;
+            labelBoot.ForeColor = Color.GreenYellow;
             labelBoot.Text = "Planner last booted at " + (DateTime.Now);
         }
 
-        private void entryAdd_Click(object sender, EventArgs e)
+        private void EntryAdd_Click(object sender, EventArgs e)
         {
-            entryLst.Items.Add(entryInput.Text);
+            EntryLst.Items.Add(EntryInput.Text + " " + (DateTime.Now));
         }
 
-        private void entryDel_Click(object sender, EventArgs e)
+        private void EntryDel_Click(object sender, EventArgs e)
         {
-            entryLst.Items.RemoveAt(entryLst.SelectedIndex);
+            EntryLst.Items.RemoveAt(EntryLst.SelectedIndex);
         }
 
-        private void entryMod_Click(object sender, EventArgs e)
+        private void EntryMod_Click(object sender, EventArgs e)
         {
-            if (entryLst.SelectedIndex != -1)
+            if (EntryLst.SelectedIndex != -1)
             {
-                entryLst.Items[entryLst.SelectedIndex] = entryInput.Text;
-                if (entryInput.Text.Length == 0)
+                EntryLst.Items[EntryLst.SelectedIndex] = EntryInput.Text + " " + (DateTime.Now);
+                if (EntryInput.Text.Length == 0)
                 {
-                    entryLst.Items.RemoveAt(entryLst.SelectedIndex);
+                    EntryLst.Items.RemoveAt(EntryLst.SelectedIndex);
                 }
             }
+        }
+
+        private void EntrySav_Click(object sender, EventArgs e)
+        {
+            string[] writelog;
+
+            File.WriteAllLines("studylog.txt", EntryLst.Items);
+        }
+
+        private void EntryLoad_Click(object sender, EventArgs e)
+        {
+            File.ReadAllText("studylog.txt");
         }
     }
 }
