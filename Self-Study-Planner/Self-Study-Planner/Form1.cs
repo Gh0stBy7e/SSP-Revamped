@@ -52,7 +52,12 @@ namespace Self_Study_Planner
 
         private void EntryLoad_Click(object sender, EventArgs e)
         {
-            File.ReadAllText("studylog.txt");
+            string[] readlog = new string[EntryLst.Items.Count];
+
+            for(int i = 0; i < EntryLst.Items.Count;i++) 
+            {
+                readlog[i] = File.ReadAllText("studylog.txt");
+            }
         }
     }
 }
