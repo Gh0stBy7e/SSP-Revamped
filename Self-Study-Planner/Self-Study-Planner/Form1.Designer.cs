@@ -145,6 +145,7 @@
             this.Controls.Add(this.EntryLst);
             this.Name = "Form1";
             this.Text = "Self-Study-Planner!";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
