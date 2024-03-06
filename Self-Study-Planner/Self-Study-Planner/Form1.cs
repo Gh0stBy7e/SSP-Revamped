@@ -80,7 +80,7 @@ namespace Self_Study_Planner
 
             for (int i = 0; i < EntryLst.Items.Count; i++)
             {
-                EntryLst.Items.Insert(Convert.ToInt32(lognm), EntryLst); //Err. No1
+                EntryLst.Items.Insert(Convert.ToInt32(lognm), EntryLst); //Err. No1 ("fill the EntryLst one item at a time and you're good to go!")
                 readlog[i] = File.ReadAllText(lognm);                    //Err. No2
                 MessageBox.Show(lognm + " has been loaded successfully! at: " + (DateTime.Now));
             }
@@ -89,10 +89,12 @@ namespace Self_Study_Planner
             if (lognm.EndsWith(".txt"))
             {
                 // file exists
+                
             }
             else
             {
                 // file doesn't exist
+                // create new file??
             }
 
             // Additional logic can be implemented here
