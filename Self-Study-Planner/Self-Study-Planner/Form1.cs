@@ -73,8 +73,6 @@ namespace Self_Study_Planner
         private void Form1_Load(object sender, EventArgs e)
         {
             string lognm = "studylog.txt";
-            // Call the base class's OnLoad method
-            base.OnLoad(e);
 
             string[] readlog = new string[EntryLst.Items.Count];
 
