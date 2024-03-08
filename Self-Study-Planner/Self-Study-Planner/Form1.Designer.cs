@@ -63,23 +63,23 @@
             // 
             this.EntryDel.Location = new System.Drawing.Point(49, 99);
             this.EntryDel.Name = "EntryDel";
-            this.EntryDel.Size = new System.Drawing.Size(75, 53);
+            this.EntryDel.Size = new System.Drawing.Size(75, 77);
             this.EntryDel.TabIndex = 2;
-            this.EntryDel.Text = "Delete Entry";
+            this.EntryDel.Text = "mark Entry as completed";
             this.EntryDel.UseVisualStyleBackColor = true;
             this.EntryDel.Click += new System.EventHandler(this.EntryDel_Click);
             // 
             // EntryInput
             // 
-            this.EntryInput.Location = new System.Drawing.Point(151, 55);
+            this.EntryInput.Location = new System.Drawing.Point(151, 40);
             this.EntryInput.Multiline = true;
             this.EntryInput.Name = "EntryInput";
-            this.EntryInput.Size = new System.Drawing.Size(256, 22);
+            this.EntryInput.Size = new System.Drawing.Size(256, 136);
             this.EntryInput.TabIndex = 3;
             // 
             // EntryMod
             // 
-            this.EntryMod.Location = new System.Drawing.Point(49, 158);
+            this.EntryMod.Location = new System.Drawing.Point(49, 182);
             this.EntryMod.Name = "EntryMod";
             this.EntryMod.Size = new System.Drawing.Size(75, 53);
             this.EntryMod.TabIndex = 4;
@@ -89,9 +89,9 @@
             // 
             // EntrySav
             // 
-            this.EntrySav.Location = new System.Drawing.Point(151, 158);
+            this.EntrySav.Location = new System.Drawing.Point(151, 182);
             this.EntrySav.Name = "EntrySav";
-            this.EntrySav.Size = new System.Drawing.Size(75, 53);
+            this.EntrySav.Size = new System.Drawing.Size(119, 53);
             this.EntrySav.TabIndex = 5;
             this.EntrySav.Text = "Save to File";
             this.EntrySav.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@
             // EntryLoad
             // 
             this.EntryLoad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.EntryLoad.Location = new System.Drawing.Point(332, 158);
+            this.EntryLoad.Location = new System.Drawing.Point(276, 182);
             this.EntryLoad.Name = "EntryLoad";
-            this.EntryLoad.Size = new System.Drawing.Size(75, 53);
+            this.EntryLoad.Size = new System.Drawing.Size(131, 53);
             this.EntryLoad.TabIndex = 6;
             this.EntryLoad.Text = "Load From File";
             this.EntryLoad.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             this.bootLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bootLabel.ForeColor = System.Drawing.Color.GreenYellow;
-            this.bootLabel.Location = new System.Drawing.Point(151, 13);
+            this.bootLabel.Location = new System.Drawing.Point(188, 9);
             this.bootLabel.Name = "bootLabel";
             this.bootLabel.Size = new System.Drawing.Size(179, 18);
             this.bootLabel.TabIndex = 7;
