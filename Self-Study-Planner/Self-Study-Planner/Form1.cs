@@ -75,12 +75,10 @@ namespace Self_Study_Planner
 
             string[] readlog = new string[EntryLst.Items.Count];
 
-            for (int i = 0; i < EntryLst.Items.Count; i++)
-            {
                 EntryLst.Items.Insert(Convert.ToInt32(lognm), EntryLst); //Err. No1 ("fill the EntryLst one item at a time and you're good to go!")
                 readlog[i] = File.ReadAllText(lognm);                    //Err. No2
                 MessageBox.Show(lognm + " has been loaded successfully! at: " + (DateTime.Now));
-            }
+            
 
             //check if file exists, if not, create one.
             if (lognm.EndsWith(".txt"))
