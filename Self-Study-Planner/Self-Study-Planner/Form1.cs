@@ -14,7 +14,6 @@ namespace Self_Study_Planner
         {
             InitializeComponent();
 
-
             labelBoot.ForeColor = Color.GreenYellow;
             labelBoot.Text = "Planner last booted at " + (DateTime.Now);
         }
