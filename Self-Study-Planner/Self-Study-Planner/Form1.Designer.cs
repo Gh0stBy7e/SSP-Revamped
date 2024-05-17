@@ -33,7 +33,6 @@
             this.EntryDel = new System.Windows.Forms.Button();
             this.EntryInput = new System.Windows.Forms.TextBox();
             this.EntryMod = new System.Windows.Forms.Button();
-            this.EntrySav = new System.Windows.Forms.Button();
             this.EntryLoad = new System.Windows.Forms.Button();
             this.bootLabel = new System.Windows.Forms.Label();
             this.labelBoot = new System.Windows.Forms.Label();
@@ -87,22 +86,12 @@
             this.EntryMod.UseVisualStyleBackColor = true;
             this.EntryMod.Click += new System.EventHandler(this.EntryMod_Click);
             // 
-            // EntrySav
-            // 
-            this.EntrySav.Location = new System.Drawing.Point(151, 182);
-            this.EntrySav.Name = "EntrySav";
-            this.EntrySav.Size = new System.Drawing.Size(119, 53);
-            this.EntrySav.TabIndex = 5;
-            this.EntrySav.Text = "Save to File";
-            this.EntrySav.UseVisualStyleBackColor = true;
-            this.EntrySav.Click += new System.EventHandler(this.EntrySav_Click);
-            // 
             // EntryLoad
             // 
             this.EntryLoad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.EntryLoad.Location = new System.Drawing.Point(276, 182);
+            this.EntryLoad.Location = new System.Drawing.Point(151, 182);
             this.EntryLoad.Name = "EntryLoad";
-            this.EntryLoad.Size = new System.Drawing.Size(131, 53);
+            this.EntryLoad.Size = new System.Drawing.Size(256, 53);
             this.EntryLoad.TabIndex = 6;
             this.EntryLoad.Text = "Load From File";
             this.EntryLoad.UseVisualStyleBackColor = true;
@@ -138,7 +127,6 @@
             this.Controls.Add(this.labelBoot);
             this.Controls.Add(this.bootLabel);
             this.Controls.Add(this.EntryLoad);
-            this.Controls.Add(this.EntrySav);
             this.Controls.Add(this.EntryMod);
             this.Controls.Add(this.EntryInput);
             this.Controls.Add(this.EntryDel);
@@ -159,7 +147,6 @@
         private System.Windows.Forms.Button EntryDel;
         private System.Windows.Forms.TextBox EntryInput;
         private System.Windows.Forms.Button EntryMod;
-        private System.Windows.Forms.Button EntrySav;
         private System.Windows.Forms.Button EntryLoad;
         private System.Windows.Forms.Label bootLabel;
         private System.Windows.Forms.Label labelBoot;

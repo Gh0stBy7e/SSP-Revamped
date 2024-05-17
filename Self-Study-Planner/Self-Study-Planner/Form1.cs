@@ -10,6 +10,8 @@ namespace Self_Study_Planner
     public partial class Form1 : Form
     {
 
+
+
         public Form1()
         {
             InitializeComponent();
@@ -18,18 +20,37 @@ namespace Self_Study_Planner
             labelBoot.Text = "Planner last booted at " + (DateTime.Now);
         }
 
-        /*protected override void OnLoad(EventArgs e)
+        public void AutoSav()
         {
+            string lognm = "studylog.txt";
+            string[] writelog = new string[EntryLst.Items.Count];
 
-        }*/
+            for (int i = 0; i < EntryLst.Items.Count; i++)
+            {
+                writelog[i] = EntryLst.Items[i].ToString();
+            }
+
+            File.WriteAllLines(lognm, writelog);
+        }
+
         private void EntryAdd_Click(object sender, EventArgs e)
         {
-            EntryLst.Items.Add(EntryInput.Text + " " + (DateTime.Now));
+
+            if(EntryLst.Items.IsNotNull) //Fix IsNotNullThing
+            {
+                EntryLst.Items.Add(EntryInput.Text + " " + (DateTime.Now));
+            }
+            else
+            {
+                MessageBox.Show("Empty input found, please revalidate entry.");
+            }
+            AutoSav();
         }
 
         private void EntryDel_Click(object sender, EventArgs e)
         {
             EntryLst.Items.RemoveAt(EntryLst.SelectedIndex);
+            AutoSav();
         }
 
         private void EntryLoad_Click(object sender, EventArgs e)
@@ -56,8 +77,8 @@ namespace Self_Study_Planner
             }
         }
 
-        private void EntrySav_Click(object sender, EventArgs e)
-        {
+        /* private void EntrySav_Click(object sender, EventArgs e)
+           {
             string lognm = "studylog.txt";
             string[] writelog = new string[EntryLst.Items.Count];
 
@@ -67,7 +88,7 @@ namespace Self_Study_Planner
             }
 
             File.WriteAllLines(lognm, writelog);
-        }
+           } */
 
         private void Form1_Load(object sender, EventArgs e)
         {
