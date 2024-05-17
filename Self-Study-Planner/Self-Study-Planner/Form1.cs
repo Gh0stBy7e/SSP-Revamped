@@ -73,26 +73,29 @@ namespace Self_Study_Planner
         {
             string lognm = "studylog.txt";
 
-            string[] readlog = new string[EntryLst.Items.Count];
-
-                EntryLst.Items.Insert(Convert.ToInt32(lognm), EntryLst); //Err. No1 ("fill the EntryLst one item at a time and you're good to go!")
-                readlog[i] = File.ReadAllText(lognm);                    //Err. No2
-                MessageBox.Show(lognm + " has been loaded successfully! at: " + (DateTime.Now));
-            
-
-            //check if file exists, if not, create one.
-            if (lognm.EndsWith(".txt"))
+            // Check if the file exists, if not, create one.
+            if (!File.Exists(lognm))
             {
-                // file exists
-                
-            }
-            else
-            {
-                // file doesn't exist
-                // create new file??
+                File.Create(lognm).Close();
             }
 
-            // Additional logic can be implemented here
+            // Read all lines from the log file into a string array.
+            string[] readlog = File.ReadAllLines(lognm);
+
+            // Clear the current items in EntryLst and add items from readlog.
+            EntryLst.Items.Clear();
+            foreach (var line in readlog)
+            {
+                EntryLst.Items.Add(line);
+            }
+
+            // Show a message that the log file has been loaded successfully.
+            MessageBox.Show(lognm + " has been loaded successfully! at: " + DateTime.Now);
+        }
+
+        private void bootLabel_Click(object sender, EventArgs e)
+        {
+            bootLabel.Text = string.Empty;
         }
     }
 }

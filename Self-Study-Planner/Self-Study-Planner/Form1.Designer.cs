@@ -119,6 +119,7 @@
             this.bootLabel.Size = new System.Drawing.Size(179, 18);
             this.bootLabel.TabIndex = 7;
             this.bootLabel.Text = "Welcome to your SSP!";
+            this.bootLabel.Click += new System.EventHandler(this.bootLabel_Click);
             // 
             // labelBoot
             // 
