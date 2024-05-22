@@ -36,8 +36,8 @@ namespace Self_Study_Planner
         private void EntryAdd_Click(object sender, EventArgs e)
         {
 
-            if(EntryLst.Items.IsNotNull) //Fix IsNotNullThing
-            {
+            if(EntryInput.Text.Length > 0) // Fix IsNotNullThing.. i fixed it :3 - peeblyweeb
+            {        
                 EntryLst.Items.Add(EntryInput.Text + " " + (DateTime.Now));
             }
             else
