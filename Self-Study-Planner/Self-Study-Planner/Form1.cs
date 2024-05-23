@@ -36,8 +36,8 @@ namespace Self_Study_Planner
         private void EntryAdd_Click(object sender, EventArgs e)
         {
 
-            if(EntryInput.Text.Length > 0) // Fix IsNotNullThing.. i fixed it :3 - peeblyweeb
-            {                              // sadly it still takes empty inputs if you just give it a whitespace, me stupid :c - ghostbyte
+            if(!string.IsNullOrWhiteSpace(EntryInput.Text)) // Fix IsNotNullThing.. i fixed it :3 - peeblyweeb
+            {                              // Fixed it with gpt, wtf, AI is way too powerful. - ghostbyte
                 EntryLst.Items.Add(EntryInput.Text + " " + (DateTime.Now));
             }
             else
