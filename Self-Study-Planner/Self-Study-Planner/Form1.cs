@@ -37,7 +37,7 @@ namespace Self_Study_Planner
         {
 
             if(EntryInput.Text.Length > 0) // Fix IsNotNullThing.. i fixed it :3 - peeblyweeb
-            {        
+            {                              // sadly it still takes empty inputs if you just give it a whitespace, me stupid :c - ghostbyte
                 EntryLst.Items.Add(EntryInput.Text + " " + (DateTime.Now));
             }
             else
