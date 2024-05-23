@@ -50,9 +50,9 @@
             // 
             // EntryAdd
             // 
-            this.EntryAdd.Location = new System.Drawing.Point(49, 40);
+            this.EntryAdd.Location = new System.Drawing.Point(12, 40);
             this.EntryAdd.Name = "EntryAdd";
-            this.EntryAdd.Size = new System.Drawing.Size(75, 53);
+            this.EntryAdd.Size = new System.Drawing.Size(112, 53);
             this.EntryAdd.TabIndex = 1;
             this.EntryAdd.Text = "Add Entry";
             this.EntryAdd.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
             // 
             // EntryDel
             // 
-            this.EntryDel.Location = new System.Drawing.Point(49, 99);
+            this.EntryDel.Location = new System.Drawing.Point(12, 99);
             this.EntryDel.Name = "EntryDel";
-            this.EntryDel.Size = new System.Drawing.Size(75, 77);
+            this.EntryDel.Size = new System.Drawing.Size(112, 77);
             this.EntryDel.TabIndex = 2;
             this.EntryDel.Text = "mark Entry as completed";
             this.EntryDel.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
             // 
             // EntryMod
             // 
-            this.EntryMod.Location = new System.Drawing.Point(49, 182);
+            this.EntryMod.Location = new System.Drawing.Point(12, 182);
             this.EntryMod.Name = "EntryMod";
-            this.EntryMod.Size = new System.Drawing.Size(75, 53);
+            this.EntryMod.Size = new System.Drawing.Size(112, 53);
             this.EntryMod.TabIndex = 4;
             this.EntryMod.Text = "Modify Entry";
             this.EntryMod.UseVisualStyleBackColor = true;

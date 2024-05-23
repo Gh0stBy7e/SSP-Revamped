@@ -10,14 +10,52 @@ namespace Self_Study_Planner
     public partial class Form1 : Form
     {
 
-
+        //GPT is way too powerful with coding, what the actual fuck - ghostbyte
 
         public Form1()
         {
             InitializeComponent();
+            CustomizeUI();
 
             labelBoot.ForeColor = Color.GreenYellow;
             labelBoot.Text = "Planner last booted at " + (DateTime.Now);
+        }
+
+        private void CustomizeUI()
+        {
+            this.BackColor = Color.LightBlue; // Set background color
+
+            // Customize buttons
+            StyleButton(EntryAdd, "Add Entry", Color.DarkBlue, Color.White);
+            StyleButton(EntryDel, "Mark Com", Color.DarkGreen, Color.White);
+            StyleButton(EntryMod, "Mod", Color.DarkOrange, Color.White);
+            StyleButton(EntryLoad, "Load From File", Color.DarkRed, Color.White);
+
+            // Customize labels
+            bootLabel.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            bootLabel.ForeColor = Color.DarkBlue;
+
+            // Customize Entry List
+            EntryLst.BackColor = Color.White;
+            EntryLst.Font = new Font("Segoe UI", 10);
+
+            // Adding Tooltips
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(EntryAdd, "Add a new study entry.");
+            toolTip.SetToolTip(EntryDel, "Mark selected entry as completed.");
+            toolTip.SetToolTip(EntryMod, "Modify the selected entry.");
+            toolTip.SetToolTip(EntryLoad, "Load entries from a file.");
+        }
+
+        private void StyleButton(Button button, string text, Color bgColor, Color fgColor)
+        {
+            button.Text = text;
+            button.BackColor = bgColor;
+            button.ForeColor = fgColor;
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderSize = 0;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.Cursor = Cursors.Hand;
         }
 
         public void AutoSav()
@@ -76,19 +114,6 @@ namespace Self_Study_Planner
                 }
             }
         }
-
-        /* private void EntrySav_Click(object sender, EventArgs e)
-           {
-            string lognm = "studylog.txt";
-            string[] writelog = new string[EntryLst.Items.Count];
-
-            for (int i = 0; i < EntryLst.Items.Count; i++)
-            {
-                writelog[i] = EntryLst.Items[i].ToString();
-            }
-
-            File.WriteAllLines(lognm, writelog);
-           } */
 
         private void Form1_Load(object sender, EventArgs e)
         {
